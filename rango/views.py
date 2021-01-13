@@ -3,7 +3,12 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Rango says hey there partner! <a href='http://127.0.0.1:8000/rango/about/'>Click here to find out about me</a>")
+    #Context for the template
+    context_dict = {"boldmessage": "Cool message"}
+    
+
+
+    return render(request, "rango/index.html", context=context_dict)
 
 def rango_app(request):
     return HttpResponse("Rango says wow you are in the rango app :)")
