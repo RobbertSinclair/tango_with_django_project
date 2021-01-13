@@ -5,3 +5,7 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("Rango says hey there partner!")
 
+def rango_app(request):
+    return HttpResponse("Rango says wow you are in the rango app :)")
+
+
