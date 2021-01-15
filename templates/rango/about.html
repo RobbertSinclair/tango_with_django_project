@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+    <head>
+        <title>About Rango</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    </head>
+
+    <body>
+        <h1>Rango Says...</h1>
+        <h2>Here is the about page</h2>
+        <h3>{{context_about}}</h3>
+        <h3>This website was built by {{name}}</h3>
+        <a href='/'>Go back</a>
+        <img src="{{MEDIA_URL}}cat-portrait.jpg" alt="Cat"/>
+        <br>
+        <div id="JeffPic">
+            <img src="{% static 'images/jeff.jpg' %}" alt="Jeff"/>
+            <p>My Programming Partner Jeff</p>
+        </div>
+        
+    </body>
+
+
+
+</html>

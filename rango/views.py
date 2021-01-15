@@ -14,6 +14,8 @@ def rango_app(request):
     return HttpResponse("Rango says wow you are in the rango app :)")
 
 def rango_about(request):
-    return HttpResponse("<h1>Rango says here is the about page <a href='http://127.0.0.1:8000'>Go back</a></h1>")
+
+    context_dict = {"context_about": "Rango is a website I am making for WAD2", "name": "Robbert Sinclair"}
+    return render(request, "rango/about.html", context=context_dict)
 
 
