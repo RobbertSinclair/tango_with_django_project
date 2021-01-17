@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 
-{% load static %}
+{% load staticfiles %}
 
 <html>
 
-<head>
-<title>Rango</title>
-<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
-</head>
+	<head>
+		<title>Rango</title>
+	</head>
 
-<body>
-	<h1>Rango says...</h1>
-	<div>
-		hey there partner! <br />
-		<strong>{{boldmessage}}</strong><br />
-	</div>
-	<div>
-		<a href="/rango/about/">About</a><br />
-	</div>
-	<div id="JeffPic">
-		<img src="{% static 'images/jeff.jpg' %}" alt="Jeff"/>
-		<p>My Programming Partner Jeff</p>
-	</div>
-</body>
+	<body>
+		
+		<h1>Rango says...</h1>
+		
+		<div>
+			hey there partner <br />
+			<strong>{{ boldmessage }}</strong><br />
+		</div>
 
+		<div>
+			<a href="/rango/about/">About</a><br />
+			<img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango." /><br />
+			<img src="{{ settings.MEDIA_URL }}cat.jpg" alt="Picture of a Cat."/>
+		</div>
 
-
+	</body>
 
 </html>
