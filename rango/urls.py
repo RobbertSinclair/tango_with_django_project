@@ -4,6 +4,8 @@ from rango import views
 app_name = "rango"
 
 urlpatterns = [
-    path('', views.rango_app, name="index"),
-    path('about/', views.rango_about, name="about")
+    path('', views.index, name="index"),
+    path('about/', views.rango_about, name="about"),
+    path('category/<slug:category_name_slug>/',
+        views.show_category, name='show_category'),
     ]
