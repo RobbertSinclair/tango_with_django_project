@@ -47,7 +47,7 @@ def index(request):
     
     
     visitor_cookie_handler(request)
-    context_dict['visits'] = request.session['visits']
+    context_dict["views"] = request.session['visits']
 
     response = render(request, 'rango/index.html', context=context_dict)
     return response
@@ -59,9 +59,8 @@ def rango_about(request):
 
     context = {"name": "Robbert Sinclair"}
 
-    if request.session.test_cookie_worked():
-        print("TEST COOKIE WORKED!")
-        request.session.delete_test_cookie()
+    visitor_cookie_handler(request)
+    context["visits"] = request.session['visits']
 
     return render(request, "rango/about.html", context=context)
 
