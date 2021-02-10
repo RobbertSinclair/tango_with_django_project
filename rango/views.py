@@ -134,7 +134,8 @@ def add_page(request, category_name_slug):
     context_dict = {"form": form, "category": category}
     return render(request, "rango/add_page.html", context=context_dict)
 
-def register(request):
+#This is redundant now due to the work in chapter 11 but I will keep it hear for reference in future projects
+'''def register(request):
 
     registered = False
 
@@ -167,10 +168,11 @@ def register(request):
         user_form = UserForm()
         profile_form = UserProfileForm()
 
-    return render(request, 'rango/register.html', context={'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
+    return render(request, 'rango/register.html', context={'user_form': user_form, 'profile_form': profile_form, 'registered': registered})'''
 
 
-def user_login(request):
+#As with the registration this view is now redundant due to chapter 11 but I am keeping for reference
+'''def user_login(request):
 
     if request.method == "POST":
 
@@ -193,15 +195,15 @@ def user_login(request):
             return HttpResponse("Invalid login details supplied.")
 
     else:
-        return render(request, "rango/login.html")
+        return render(request, "rango/login.html")'''
 
 @login_required
 def restricted(request):
     return render(request, "rango/restricted.html")
 
-@login_required
+'''@login_required
 def user_logout(request):
     logout(request)
 
-    return redirect(reverse('rango:index'))
+    return redirect(reverse('rango:index'))'''
 

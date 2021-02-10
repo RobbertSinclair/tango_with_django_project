@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rango',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -132,4 +133,12 @@ MEDIA_URL = '/media/'
 
 #Setup Login Urls
 
-LOGIN_URL = 'rango:login'
+LOGIN_URL = 'auth_login'
+
+#Registration variables
+
+REGISTRATION_OPEN = True
+
+REGISTRATION_AUTO_LOGIN = True
+
+LOGIN_REDIRECT_URL = 'rango:index'
