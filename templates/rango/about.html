@@ -6,6 +6,14 @@
 {% endblock %}
 
 {% block body_block %}
+	<style>
+		.img-responsive {
+			width: auto;
+			height: 400px;
+		}
+	</style>
+
+
 	<h1>Rango says...</h1>
 
 	<div>
@@ -15,7 +23,7 @@
 	</div>
 
 	<div>
-		<img class="thumbnail" src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" /><br />
-		<img class="thumbnail" src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat." />
+		<img class="img-responsive img-thumbnail" src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" /><br />
+		<img class="img-responsive img-thumbnail height: 50%" src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat." />
 	</div>
 {% endblock %}
