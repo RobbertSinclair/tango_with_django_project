@@ -7,6 +7,7 @@ from rango.models import Category, Page
 import random
 
 def populate():
+    print("Hello World")
     
     python_pages = [
         {'title': 'Official Python Tutorial',
